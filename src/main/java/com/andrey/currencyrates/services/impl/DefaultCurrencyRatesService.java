@@ -1,9 +1,10 @@
 package com.andrey.currencyrates.services.impl;
 
-import java.rmi.RemoteException;
-
-import javax.xml.rpc.ServiceException;
-
+import com.andrey.currencyrates.services.CurrencyRatesService;
+import lt.lb.webservices.ExchangeRates.ExchangeRates;
+import lt.lb.webservices.ExchangeRates.ExchangeRatesLocator;
+import lt.lb.webservices.ExchangeRates.ExchangeRatesSoap;
+import lt.lb.webservices.ExchangeRates.GetExchangeRatesByDateResponseGetExchangeRatesByDateResult;
 import org.apache.axis.message.MessageElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,12 +12,8 @@ import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
-import com.andrey.currencyrates.services.CurrencyRatesService;
-
-import lt.lb.webservices.ExchangeRates.ExchangeRates;
-import lt.lb.webservices.ExchangeRates.ExchangeRatesLocator;
-import lt.lb.webservices.ExchangeRates.ExchangeRatesSoap;
-import lt.lb.webservices.ExchangeRates.GetExchangeRatesByDateResponseGetExchangeRatesByDateResult;
+import javax.xml.rpc.ServiceException;
+import java.rmi.RemoteException;
 
 @Service
 public class DefaultCurrencyRatesService implements CurrencyRatesService {
@@ -41,8 +38,7 @@ public class DefaultCurrencyRatesService implements CurrencyRatesService {
         return null;
     }
 
-    private NodeList getNodeList(final MessageElement messageElement)
-    {
+    private NodeList getNodeList(final MessageElement messageElement) {
         try {
             final Document document = messageElement.getAsDocument();
             document.normalize();

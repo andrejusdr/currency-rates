@@ -1,10 +1,9 @@
 package com.andrey.currencyrates.converters;
 
-import org.springframework.core.convert.converter.Converter;
-import org.springframework.stereotype.Component;
-
 import com.andrey.currencyrates.data.CurrencyRateChangeData;
 import com.andrey.currencyrates.data.CurrencyRateData;
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
 
 @Component
 public class CurrencyRateToCurrencyRateChangeConverter implements Converter<CurrencyRateData, CurrencyRateChangeData> {

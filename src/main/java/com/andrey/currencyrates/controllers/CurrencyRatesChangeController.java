@@ -27,8 +27,8 @@ public class CurrencyRatesChangeController {
 
     @GetMapping("/changes/{date}")
     @ApiOperation(value = "Get currency rate change by date", notes = "Endpoint to retrieve the currency rate change calculated by given date and one day before")
-    @ApiResponses({@ApiResponse(code = 200, message = "Returns List of CurrencyRateChangeData objects sorted by biggest rate change", response = CurrencyRateChangeData.class) })
+    @ApiResponses({@ApiResponse(code = 200, message = "Returns List of CurrencyRateChangeData objects sorted by biggest rate change", response = CurrencyRateChangeData.class)})
     public ResponseEntity<List<CurrencyRateChangeData>> getCurrencyChangeByDate(@PathVariable final String date) {
-            return ResponseEntity.ok(currencyRatesChangeFacade.getCurrencyRatesChangeByDate(date));
+        return ResponseEntity.ok(currencyRatesChangeFacade.getCurrencyRatesChangeByDate(date));
     }
 }

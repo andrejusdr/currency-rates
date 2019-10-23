@@ -1,15 +1,13 @@
 package com.andrey.currencyrates.converters;
 
-import java.math.BigDecimal;
-
-import javax.validation.constraints.NotNull;
-
+import com.andrey.currencyrates.data.CurrencyRateData;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
-import com.andrey.currencyrates.data.CurrencyRateData;
+import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 
 @Component
 public class NodeToCurrencyRateDataConverter implements Converter<Node, CurrencyRateData> {

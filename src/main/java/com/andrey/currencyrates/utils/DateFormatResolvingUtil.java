@@ -18,7 +18,8 @@ public class DateFormatResolvingUtil {
             put("^\\d{4}/\\d{1,2}/\\d{1,2}$", "yyyy/MM/dd");
             put("^\\d{1,2}\\s[a-z]{3}\\s\\d{4}$", "dd MMM yyyy");
             put("^\\d{1,2}\\s[a-z]{4,}\\s\\d{4}$", "dd MMMM yyyy");
-        }};
+        }
+    };
 
     public static LocalDate getLocalDateFromString(final String dateValue) {
         return LocalDate.parse(dateValue, getDateFormat(dateValue));

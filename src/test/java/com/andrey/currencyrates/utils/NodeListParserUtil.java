@@ -8,7 +8,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.net.URL;
 
 public class NodeListParserUtil {
 
@@ -18,8 +17,8 @@ public class NodeListParserUtil {
         try {
             final DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             final DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-                final Document document = documentBuilder.parse(response);
-                return document.getElementsByTagName(ITEM);
+            final Document document = documentBuilder.parse(response);
+            return document.getElementsByTagName(ITEM);
         } catch (final SAXException | IOException | ParserConfigurationException e) {
             return null;
         }

@@ -1,28 +1,23 @@
 package com.andrey.currencyrates.facades.impl;
 
-import static com.andrey.currencyrates.utils.DateFormatResolvingUtil.getLocalDateFromString;
-
-import java.time.LocalDate;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.w3c.dom.NodeList;
-
 import com.andrey.currencyrates.converters.CurrencyRateToCurrencyRateChangeConverter;
 import com.andrey.currencyrates.converters.NodeToCurrencyRateDataConverter;
 import com.andrey.currencyrates.data.CurrencyRateChangeData;
 import com.andrey.currencyrates.data.CurrencyRateData;
 import com.andrey.currencyrates.facades.CurrencyRatesChangeFacade;
 import com.andrey.currencyrates.services.CurrencyRatesService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.w3c.dom.NodeList;
+
+import java.time.LocalDate;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+import static com.andrey.currencyrates.utils.DateFormatResolvingUtil.getLocalDateFromString;
 
 @Component
 public class DefaultCurrencyRatesChangeFacade implements CurrencyRatesChangeFacade {

@@ -1,14 +1,13 @@
 package com.andrey.currencyrates.converters;
 
-import java.math.BigDecimal;
-
+import com.andrey.currencyrates.data.CurrencyRateChangeData;
+import com.andrey.currencyrates.data.CurrencyRateData;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.andrey.currencyrates.data.CurrencyRateChangeData;
-import com.andrey.currencyrates.data.CurrencyRateData;
+import java.math.BigDecimal;
 
 @SpringBootTest
 public class CurrencyRateToCurrencyRateChangeConverterTest {
